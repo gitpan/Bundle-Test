@@ -1,6 +1,6 @@
 package Bundle::Test;
 
-$VERSION = "1.00";
+$VERSION = "1.01";
 
 1;
 
@@ -12,12 +12,12 @@ Bundle::Test - A set of modules for software testing in Perl
 
 =head1 SYNOPSIS
 
- perl -MCPAN -e 'install Bundle::Test'
+perl -MCPAN -e 'install Bundle::Test'
 
 =head1 DESCRIPTION
 
-This bundle installs a set of modules you can use to build various
-kinds of Tests for your Perl Module or Application.
+This bundle installs a set of modules you can use to build all 
+kinds of tests for your perl modules and applications.
 
 As a first attempt you should read the documentation of the respective
 modules.  Probably you should start by reading L<Test::Tutorial> which
@@ -32,18 +32,21 @@ transfered when you move using Test::More without loss.
 L<Test::More> is an extension of Test::Simple. It provides a number of
 tools to compare various data structures of Perl.
 
-With L<Test::Harness> you are lucky. In most of the cases you won't need it
-as it contains a framework to execute the various test scripts created
+With L<Test::Harness> you are lucky. In most of the cases you won't need 
+to learn it as it contains a framework to execute the various test scripts created
 using the other modules. At some point later in your test development you 
 might need this though in order to package all your tests nicely.
 
 L<Test>
+A simple way to write tests. It is mostly outdated. You should use L<Test::Simple> instead.
 
 L<Test::MockObject>
+One of the biggest problems in testing is that you have to control your environment.
+This module lets you do just that.
 
-L<Test::Pod> is a BETA software, it should be revisited later to
-give more convincing description.
-
+L<Test::Pod> 
+provide a way to test the syntax of your PODs.
+This is a BETA software.
 
 
 =head1 CONTENTS
@@ -61,47 +64,33 @@ Test::MockObject
 Test::Pod
 
 
-=head1 OTHER
-
-More modules I plan to add to the bundle
-
-Test::Unit
-I have failed to install this one
-
-Tk
-Why did I need this ? Maybe for the Tk debugger ?
-
-L<Test::Inline>
-Test::Inline
-
 =head1 QUALITY ASSURANCE
 
 You write test in order make your software of higher quality.
 An important requirement for this is that your testing tools should be
 of high quality.
 
-At this point though I have only collected a few modules that can be used 
-for testing and I don't want to make any statement regarding their quality.
-So you are on you own here.
 
 =head1 REFERENCES
 
-CPAN Test Results: F<http://testers.cpan.org/>
-CPANS F<http://www.pobox.com/~schwern/talks/CPANTS/>
-Article by Chromatic F<http://www.perl.com/pub/a/2001/12/04/testing.html>
+ CPAN Test Results: L<http://testers.cpan.org/>
+ QA and kwality for Perl: L<http://qa.perl.org/>
+ CPANS L<http://www.pobox.com/~schwern/talks/CPANTS/>
+ Article by Chromatic L<http://www.perl.com/pub/a/2001/12/04/testing.html>
+ 
 
 =head1 AUTHOR
 
-Gabor Szabo <lt>gabor@pti.co.il</lt>
+Gabor Szabo E<lt>gabor@pti.co.ilE<gt>
 
 =head1 COPYRIGHT
 
-Copyright 2002 by Gabor Szabo E<lt>gabor@pti.co.ilE<gt>.
+Copyright 2002-2003 by Gabor Szabo L<http://www.pti.co.il>.
 
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
-See F<http://www.perl.com/perl/misc/Artistic.html>
+See L<http://www.perl.com/perl/misc/Artistic.html>
 
 =cut 
 
