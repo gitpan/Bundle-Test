@@ -1,5 +1,11 @@
 This bundle installs modules that provide you ways for writing
-tests for your Perl modules and application.
+tests for your Perl modules and application. It also includes
+some description about these modules and about modules to be
+use for general software testing using Perl.
+
+
+See the internal POD documentation for more details or look at 
+http://search.cpan.org/dist/Bundle-Test/
 
 
 
