@@ -1,24 +1,25 @@
 package Bundle::Test;
 
-$VERSION = "1.03";
+$VERSION = "1.05";
 
-1;
-
+Probably adding many things
+- Pod::
 __END__
 
 =head1 NAME
 
-Bundle::Test - A set of modules for software testing with Perl 
+Bundle::Test - A set of modules for software and hardware testing using Perl 
 
 =head1 SYNOPSIS
 
- A bundle does not have code in it. It is only a list of related modules.
- It exists only to make it easier to install these modules with one command:
+A bundle does not have code in it. It is only a list of related modules.
+It exists only to make it easier to install these modules with one command:
  
  perl -MCPAN -e 'install Bundle::Test'
 
- This bundle, in addition to the plain list of modules, also contains some 
- explanation which module is for what purpose. Read on.
+This bundle, however, in addition to the plain list of modules, also contains 
+some explanation about the modules. There are explanataion even about modules
+not installed by this bundle but related to testing. Read on.
 
 =head1 Description
 
@@ -26,24 +27,35 @@ This bundle installs a set of modules you can use to build all
 kinds of tests both for your Perl modules and for applications written
 in any language.
 
-As a first attempt you should read the documentation of the respective
-modules.  Probably you should start by reading L<Test::Tutorial> which
-is a good introduction to testing in general, to L<Test::Simple> and to
-L<Test::More>.
+If you know what would you like to test and are looking for the tools,
+you came to the right place. After reading a short explanation here
+you'll be redirected to the documentation of the respective modules.  
 
-=head1 Fields that can be tested using Perl
+If you'd like to learn about the testing framework in Perl you should start by 
+reading  L<Test::Tutorial> which is a good introduction. After that go on and 
+read the documentation of L<Test::Simple> and L<Test::More>.
+
+=head2 Fields that can be tested using Perl
 
 =over 4
 
 =item Web Applications
 
+=item Web Services
+
 =item Networking devices using Command Line Interface (CLI)
 
 =item Databases
 
+=item GUI based applications on Windows
+
+=item GUI based applications on X-Windows
+
 =back
 
 =head1 Module descriptions
+
+=head2 General
 
 =over 4
 
@@ -112,7 +124,10 @@ Our super-duper calculator program is this:
  print $ARGV[0]/$ARGV[1];
 
 
-Our test suit I<myapp.pl 6 2> indeed prints 3. Test passes OK.
+Our test suit indeed prints 3. Test passes OK.
+
+ myapp.pl 6 2
+ 
 Checking coverage: the code has full coverage.
 
 Still it is obvious that there is a bug in there, that will cause a crash.
@@ -125,7 +140,9 @@ Still it is obvious that there is a bug in there, that will cause a crash.
 
 =item L<HTTP::Proxy>
 
-=item Samie  L<http://samie.sourceforge.net/>
+=item Samie  
+
+L<http://samie.sourceforge.net/>
 
 =item L<Class::DBI>
 
@@ -148,7 +165,7 @@ A deep-structure testing module.
 
 =back
 
-=head1 Win32
+=head2 Win32 Specific
 
 Modules specific to Microsoft Windows.
 
@@ -163,13 +180,13 @@ up till full testing of the application.
 =item L<Win32::IE::Mechanize>
 
 There are lots of web applications out there that are built specifically for Internet Explorer.
-It would be very hard to test them with anything else than the real thing. L<Winew::IE::Mechanizes>
+It would be very hard to test them with anything else than the real thing. L<Win32::IE::Mechanizes>
 provides an API very similar to the one of L<WWW::Mechanize> that will use a real Internet Explorer
 as the user agent. Of course for this you will have to run the testing suit on Windows.
 
 =back
 
-=head1 Unix/Linux
+=head2 Unix/Linux Specific
 
 Modules specific to Unix/Linux or those that do not work on other platforms.
 
@@ -225,6 +242,8 @@ Test::MockObject
 
 Test::Pod
 
+Test::Pod::Coverage
+
 Test::Warn
 
 Test::Exception
@@ -235,40 +254,39 @@ Test::Inline
 
 =head1 Other Resources 
 
-=over 4
+=head2 Perl Community
 
-=item CPAN Testers
+=head3 CPAN Testers
 
- CPAN Test Results: http://testers.cpan.org/
- In addition to being a repository for Perl modules CPAN also provides a framework for
- testing these modules in various environments and platforms. As the sole developer of
- a module usually has access to only his/her own development environment it is extremly
- useful to have other people volunteer their own computers for testing purposes. These
- people are called the CPAN Tester.
+CPAN Test Results: http://testers.cpan.org/
+
+In addition to being a repository for Perl modules CPAN also provides a framework for
+testing these modules in various environments and platforms. As the sole developer of
+a module usually has access to only his/her own development environment it is extremly
+useful to have other people volunteer their own computers for testing purposes. These
+people are called the CPAN Tester.
  
- Every time a new version of a module is uploaded to PAUSE and thus to CPAN an e-mail 
- is sent out to the mailing list of the CPAN testers. Based on this e-mail they can
- automate their system to download the new module and initiate an installation cycle.
- What they are interested is usually not the installed module but the test phase of the
- installation process. The results of these test runs are then sent back to a database.
- You can view the data at L<http://testers.cpan.org/>
+Every time a new version of a module is uploaded to PAUSE and thus to CPAN an e-mail 
+is sent out to the mailing list of the CPAN testers. Based on this e-mail they can
+automate their system to download the new module and initiate an installation cycle.
+What they are interested is usually not the installed module but the test phase of the
+installation process. The results of these test runs are then sent back to a database.
+You can view the data at L<http://testers.cpan.org/>
  
- The mailing list of the CPAN Testers:
- L<http://lists.cpan.org/showlist.cgi?name=cpan-testers>
+The mailing list of the CPAN Testers:
+L<http://lists.cpan.org/showlist.cgi?name=cpan-testers>
 
-=item QA and kwality
+=head3 QA and kwality
 
- QA and kwality for Perl: http://qa.perl.org/
+QA and kwality for Perl: http://qa.perl.org/
  
- This web site and the accompaining mailing list
- L<http://lists.cpan.org/showlist.cgi?name=perl-qa> are the central place for 
- all the questions regarding QA within Perl. The site contains a number of links
- to various resources related to Quality Assurance. In the mailing list there are
- quite a number of people who can answer questions regarding the use of Perl in QA.
+This web site and the accompaining mailing list
+L<http://lists.cpan.org/showlist.cgi?name=perl-qa> are the central place for 
+all the questions regarding QA within Perl. The site contains a number of links
+to various resources related to Quality Assurance. In the mailing list there are
+quite a number of people who can answer questions regarding the use of Perl in QA.
 
-=back
-
-=head1 Articles
+=head2 Articles
 
  CPANTS http://www.pobox.com/~schwern/talks/CPANTS/
  An introduction to Testing by chromatic L<http://www.perl.com/pub/a/2001/12/04/testing.html>
@@ -277,18 +295,16 @@ Test::Inline
  Testing mod_perl 2.0 by Geoffrey Young L<http://www.perl.com/pub/a/2003/05/22/testing.html>
  Building Testing Libraries by Casey West L<http://www.perl.com/pub/a/2004/05/07/testing.html>
 
-=head1 Books
+=head2 Books
 
  Perl books at http://books.perl.org/
  Testing related books:
 
-=head1 Quality of These modules
+=head1 Bugs
 
 You write test in order make your software of higher quality.
 An important requirement for this is that your testing tools should be
 of high quality.
-
-=head1 Bugs
 
 If you find a bug in any of the modules mentioned in this document please report
 it by submitting a bug report to RT L<http://rt.cpan.org/> the bug tracking system
@@ -304,15 +320,8 @@ bug-bundle-test@rt.cpan.org
 
 Specifically in the case of this module it is less important to have a log of the
 reports as this module has no code in it. You can send your reports directly to
-L<gabor@pti.co.il>
+L<mailto:gabor@pti.co.il>
 
-
-=head1 TODO
-
- Add more modules and descriptions.
- Categorise according to areas of testing.
-
-Testing Framework
 
 =head1 Thanks
 
@@ -326,7 +335,7 @@ Stevan Little for his suggestions
 
 =head1 AUTHOR
 
- Gabor Szabo L<gabor@pti.co.il>
+ Gabor Szabo L<mailto:gabor@pti.co.il>
  L<http://www.pti.co.il/>
 
 =head1 COPYRIGHT

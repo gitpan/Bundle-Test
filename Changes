@@ -16,4 +16,12 @@ Docs cleaned up a bit
 - More modules and descriptions
 - try to hide the CONTENTS list from the casual reader
 
+1.04
 
+- Style changes and more text
+
+
+1.05 2005 November 22
+
+- Probably adding many things earlier
+- Adding Test::Pod::Coverage
