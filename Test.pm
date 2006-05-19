@@ -1,9 +1,7 @@
 package Bundle::Test;
 
-$VERSION = "1.05";
+$VERSION = "1.06";
 
-Probably adding many things
-- Pod::
 __END__
 
 =head1 NAME
@@ -134,9 +132,17 @@ Still it is obvious that there is a bug in there, that will cause a crash.
 
 =item L<HTML::Lint>
 
+=item L<LWP>
+
+=item L<LWP::Simple>
+
 =item L<Test::HTML::Lint>
 
 =item L<WWW::Mechanize>
+
+=item L<Test::WWW::Mechanize>
+
+=item L<Test::WWW::Simple>
 
 =item L<HTTP::Proxy>
 
@@ -146,6 +152,10 @@ L<http://samie.sourceforge.net/>
 
 =item L<Class::DBI>
 
+Easy database access, mapping each table to a perl class.
+
+=item L<DBI>
+
 =item L<Test::DatabaseRow>
 
 =item L<File::Compare>
@@ -154,6 +164,8 @@ L<http://samie.sourceforge.net/>
 
 =item L<Test::Exception>
 
+=item L<Test::Differences>
+
 =item L<Test::Deep>
 
 A deep-structure testing module.
@@ -161,6 +173,10 @@ A deep-structure testing module.
 =item L<DBD::Mock>
 
 =item L<Test::Unit>
+
+=item L<IPC::Run>
+
+=item L<IPC::Run3>
 
 
 =back
@@ -183,6 +199,9 @@ There are lots of web applications out there that are built specifically for Int
 It would be very hard to test them with anything else than the real thing. L<Win32::IE::Mechanizes>
 provides an API very similar to the one of L<WWW::Mechanize> that will use a real Internet Explorer
 as the user agent. Of course for this you will have to run the testing suit on Windows.
+
+=item L<Win32::IEAutomation>
+
 
 =back
 
@@ -209,17 +228,27 @@ Expect script execute it on your behalf.
 The basic idea behind this module is that working with a command line appltication involves two steps
 repeated a lot of times.
 
+=item L<Expect::Simple>
+
 =over 4
 
 =item 1 User types in something and presses ENTER
 
-=item 2 USer waits for some response I<Expect>ing a string. Upon receiving that string s/he goes back to step 1
+=item 2 User waits for some response I<Expect>ing a string. Upon receiving that string s/he goes back to step 1
 
 =back
 
 =back
 
+=head2 Apache Specific
 
+Modules specific to Apache
+
+=over 4
+
+=item L<Apache::Test>
+
+=back
 
 =begin _for_CPAN_only
 
@@ -228,27 +257,83 @@ Humans can skip this part of the document.
 
 =head1 CONTENTS
 
+Class::DBI
+
+Class::DBI::Loader
+
+Class::DBI::Loader::Relationship
+
+DBI
+
+Devel::Cover
+
+File::Compare
+
+HTML::Lint
+
+Net::FTP
+
+Net::SSH
+
+Net::Telnet
+
+Inline::C
+
+IPC::Run
+
+IPC::Run3
+
+LWP
+
+LWP::Simple
+
 Test
 
 Test::Builder
 
-Test::Simple
+Test::DatabaseRow
 
-Test::More
+Test::Deep
+
+Test::Diff
+
+Test::Differences
+
+Test::Exception
+
+Test::Inline
 
 Test::Harness
 
+Test::HTML::Lint
+
+Test::HTML::Tidy
+
+Test::LongString
+
+Test::NoWarnings
+
+Test::MockModule
+
 Test::MockObject
+
+Test::More
+
+Test::Output
 
 Test::Pod
 
 Test::Pod::Coverage
 
+Test::Simple
+
 Test::Warn
 
-Test::Exception
+Test::WWW::Simple
 
-Test::Inline
+Test::WWW::Mechanize
+
+WWW::Mechanize
 
 =end _for_CPAN_only
 
@@ -276,9 +361,9 @@ You can view the data at L<http://testers.cpan.org/>
 The mailing list of the CPAN Testers:
 L<http://lists.cpan.org/showlist.cgi?name=cpan-testers>
 
-=head3 QA and kwality
+=head3 QA and kwalitee
 
-QA and kwality for Perl: http://qa.perl.org/
+QA and kwalitee for Perl: http://qa.perl.org/
  
 This web site and the accompaining mailing list
 L<http://lists.cpan.org/showlist.cgi?name=perl-qa> are the central place for 
@@ -298,7 +383,8 @@ quite a number of people who can answer questions regarding the use of Perl in Q
 =head2 Books
 
  Perl books at http://books.perl.org/
- Testing related books:
+ Testing related books: 
+   Perl Testing: A Developer's Notebook: http://books.perl.org/book/236
 
 =head1 Bugs
 

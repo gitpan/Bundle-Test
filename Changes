@@ -20,8 +20,12 @@ Docs cleaned up a bit
 
 - Style changes and more text
 
-
 1.05 2005 November 22
 
 - Probably adding many things earlier
 - Adding Test::Pod::Coverage
+
+1.06 2006 May 19
+
+- Add several more modules
+
