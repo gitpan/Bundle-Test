@@ -1,6 +1,6 @@
 package Bundle::Test;
 
-$VERSION = "1.06";
+$VERSION = "1.07";
 
 __END__
 
@@ -108,6 +108,30 @@ Some people like to add their tests right next to their code. This module let's 
 do just that. Add some POD documentation to your code and embed your tests in your 
 documentation next to your code.
 
+=item L<Test::Strict>
+
+Checking if all the modules and script in the distribution have
+
+  use strict;
+  use warnings;
+
+and if they can compile using -c
+
+=item L<Test::Distribution>
+
+Testing several aspects of a distibution.
+It has an odd interface with the rest of the TAP modules as it computes its own plan.
+
+=item L<Test::Perl::Critic>
+
+=item L<Test::Kwalitee>
+
+Test the Kwalitee of a module as described in L<http://cpants.perl.org>
+
+=item L<Pod::Spell>
+
+=item L<Test::Spelling>
+
 =item L<Devel::Cover>
 
 When you are testing your code, you can apply various measurements on how good your tests are.
@@ -145,6 +169,8 @@ Still it is obvious that there is a bug in there, that will cause a crash.
 =item L<Test::WWW::Simple>
 
 =item L<HTTP::Proxy>
+
+=item L<HTTP::Recorder>
 
 =item Samie  
 
@@ -254,8 +280,44 @@ Modules specific to Apache
 
 CONTENTS is the actually listing of the modules that is used by CPAN.pm to install.
 Humans can skip this part of the document.
+I should reorder the listing to be in order of installation
+
 
 =head1 CONTENTS
+
+Test
+
+Test::Builder
+
+Test::Simple
+
+Test::More
+
+Test::Harness
+
+Test::MockObject
+
+Test::Pod
+
+Test::Pod::Coverage
+
+Test::Memory::Cycle
+
+Test::Warn
+
+Test::Exception
+
+Test::Inline
+
+Test::Strict
+
+Test::Distribution
+
+Test::Perl::Critic 
+
+Test::Kwalitee 
+
+DBI
 
 Class::DBI
 
@@ -263,13 +325,15 @@ Class::DBI::Loader
 
 Class::DBI::Loader::Relationship
 
-DBI
-
 Devel::Cover
 
 File::Compare
 
 HTML::Lint
+
+HTTP::Proxy
+
+HTTP::Recorder
 
 Net::FTP
 
@@ -287,25 +351,19 @@ LWP
 
 LWP::Simple
 
-Test
-
-Test::Builder
+HTTP::Daemon
 
 Test::DatabaseRow
 
 Test::Deep
 
-Test::Diff
+Text::Diff
 
 Test::Differences
 
-Test::Exception
-
-Test::Inline
-
-Test::Harness
-
 Test::HTML::Lint
+
+HTML::Tidy
 
 Test::HTML::Tidy
 
@@ -315,25 +373,14 @@ Test::NoWarnings
 
 Test::MockModule
 
-Test::MockObject
-
-Test::More
-
 Test::Output
-
-Test::Pod
-
-Test::Pod::Coverage
-
-Test::Simple
-
-Test::Warn
 
 Test::WWW::Simple
 
+WWW::Mechanize
+
 Test::WWW::Mechanize
 
-WWW::Mechanize
 
 =end _for_CPAN_only
 
@@ -373,12 +420,26 @@ quite a number of people who can answer questions regarding the use of Perl in Q
 
 =head2 Articles
 
- CPANTS http://www.pobox.com/~schwern/talks/CPANTS/
- An introduction to Testing by chromatic L<http://www.perl.com/pub/a/2001/12/04/testing.html>
- Web Testing with HTTP::Recorder by Linda Julien L<http://www.perl.com/pub/a/2004/06/04/recorder.html>
- A Test::MockObject Illustrated Example by chromatic L<http://www.perl.com/pub/a/2002/07/10/tmo.html>
- Testing mod_perl 2.0 by Geoffrey Young L<http://www.perl.com/pub/a/2003/05/22/testing.html>
- Building Testing Libraries by Casey West L<http://www.perl.com/pub/a/2004/05/07/testing.html>
+=over 4
+
+=item CPANTS 
+L<http://www.pobox.com/~schwern/talks/CPANTS/>
+
+=item An introduction to Testing by chromatic 
+L<http://www.perl.com/pub/a/2001/12/04/testing.html>
+
+=item Web Testing with HTTP::Recorder by Linda Julien L<http://www.perl.com/pub/a/2004/06/04/recorder.html>
+
+=item A Test::MockObject Illustrated Example by chromatic L<http://www.perl.com/pub/a/2002/07/10/tmo.html>
+
+=item Testing mod_perl 2.0 by Geoffrey Young L<http://www.perl.com/pub/a/2003/05/22/testing.html>
+
+=item Building Testing Libraries by Casey West L<http://www.perl.com/pub/a/2004/05/07/testing.html>
+
+=item Chris Dolan: Private Regression Tests 
+      L<http://www.chrisdolan.net/talk/index.php/2005/11/14/private-regression-tests/>
+
+=back
 
 =head2 Books
 

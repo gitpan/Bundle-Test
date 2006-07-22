@@ -4,3 +4,5 @@ Changes
 README
 Makefile.PL
 META.yml                                Module meta-data (added by MakeMaker)
+t/pod-spell.t
+t/pod.t
