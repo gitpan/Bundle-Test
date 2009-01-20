@@ -6,10 +6,3 @@ WriteMakefile(
     'VERSION_FROM' => 'Test.pm',
 );
 
-
-
-
-
-
-
-

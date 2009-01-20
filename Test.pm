@@ -1,6 +1,8 @@
 package Bundle::Test;
+use strict;
+use warnings;
 
-$VERSION = "1.07";
+our $VERSION = "1.08";
 
 __END__
 
@@ -293,6 +295,8 @@ Test::Simple
 
 Test::More
 
+Test::Most
+
 Test::Harness
 
 Test::MockObject
@@ -418,6 +422,8 @@ all the questions regarding QA within Perl. The site contains a number of links
 to various resources related to Quality Assurance. In the mailing list there are
 quite a number of people who can answer questions regarding the use of Perl in QA.
 
+Perl QA Wiki: http://perl-qa.yi.org/
+
 =head2 Articles
 
 =over 4
@@ -437,7 +443,7 @@ L<http://www.perl.com/pub/a/2001/12/04/testing.html>
 =item Building Testing Libraries by Casey West L<http://www.perl.com/pub/a/2004/05/07/testing.html>
 
 =item Chris Dolan: Private Regression Tests 
-      L<http://www.chrisdolan.net/talk/index.php/2005/11/14/private-regression-tests/>
+      L<http://www.chrisdolan.net/talk/2005/11/14/private-regression-tests/>
 
 =back
 
@@ -478,7 +484,10 @@ Stevan Little for his suggestions
 
  The author provides training sessions for QA engineers that covers a number of fields
  where Perl can be used in QA Automation. The syllabus of the course can be found here:
- L<http://www.pti.co.il/qa_automation.html>
+ L<http://szabgab.com/perl_in_test_automation.html>
+
+ In addition he provides an irregular newsletter with Test Automatin Tips
+ L<http://szabgab.com/test_automation_tips.html>
 
 =head1 AUTHOR
 
@@ -487,7 +496,7 @@ Stevan Little for his suggestions
 
 =head1 COPYRIGHT
 
- Copyright 2002-2004 by Gabor Szabo L<http://www.pti.co.il>.
+ Copyright 2002-2009 by Gabor Szabo L<http://www.pti.co.il>.
 
  This program is free software; you can redistribute it and/or
  modify it under the same terms as Perl itself.
